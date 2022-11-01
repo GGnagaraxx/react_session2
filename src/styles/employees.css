@@ -1,0 +1,58 @@
+.employees-comp{
+    width: 90%;
+    min-width: 250px;
+    max-width: 1000px;
+    max-height: 80vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.container-lg{
+    padding: 10px;
+}
+
+.title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin: 5px;
+    border-bottom: 1px solid grey;
+    line-height: 100px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.card{
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 3px 5px gray;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.emp-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.emp-info{
+    text-align: center;
+    flex: none;
+    width: 200px;
+    max-width: 200px;
+}
+
+.emp-img{
+    flex: none;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+

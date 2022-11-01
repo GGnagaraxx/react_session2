@@ -1,0 +1,14 @@
+.car-comp{
+    width: 50%;
+    max-width: 1000px;
+}
+
+h2{
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.info-grp{
+    display: flex;
+    justify-content: space-between;
+}
