@@ -1,3 +1,15 @@
+.emp-alert{
+    display: unset;
+    position: fixed!important;
+    top: 5px;
+    right: 5px;
+    z-index: 9999;
+}
+
+.emp-alert p{
+    margin: 0;
+}
+
 .employees-comp{
     width: 90%;
     min-width: 250px;

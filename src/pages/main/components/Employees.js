@@ -2,9 +2,25 @@ import React from 'react';
 import data from '../../../data/data';
 import { Container, Row, Col } from 'react-bootstrap';
 
-function Employees(){
+function Employees({ setAlert }){
 
     const { employees } = data;
+
+    function handleMouseEnter(e){
+        console.log(employees)
+        const empData = employees.find(emp => emp.employeeId == e.target.id)
+
+        console.log("empData:", empData)
+        empData.alert = true;
+        
+        setAlert(empData);
+    }
+
+    function handleMouseLeave(e){
+        const empData = {alert: false}
+        
+        setAlert(empData);
+    }
 
     return(
         <div className='employees-comp'>
@@ -14,7 +30,15 @@ function Employees(){
                     {
                         employees.map((employee)=>{
                             return(
-                                <Col xs={12} sm={12} md={5} className='card m-1' key={employee.employeeId}>
+                                <Col 
+                                    xs={12} 
+                                    sm={12} 
+                                    md={5} 
+                                    className='card m-1' 
+                                    key={employee.employeeId}
+                                    id={employee.employeeId}
+                                    onMouseEnter={handleMouseEnter}
+                                    onMouseLeave={handleMouseLeave}>
                                     <div className="emp-card justify-content-sm-between justify-content-md-center">
                                         <div className='emp-info'>
                                             <p className='emp-name bold'>{employee.name}</p>

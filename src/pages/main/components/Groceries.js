@@ -21,7 +21,7 @@ class Groceries extends React.Component {
                 amt: 1,
             },
             {
-                groceryId: "3",
+                groceryId: "4",
                 itemName: "Milk",
                 amt: 3,
             },
