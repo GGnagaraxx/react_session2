@@ -7,16 +7,15 @@ function Employees({ setAlert }){
     const { employees } = data;
 
     function handleMouseEnter(e){
-        console.log(employees)
         const empData = employees.find(emp => emp.employeeId == e.target.id)
 
-        console.log("empData:", empData)
+        if (!empData)return;
         empData.alert = true;
         
         setAlert(empData);
     }
 
-    function handleMouseLeave(e){
+    function handleMouseLeave(){
         const empData = {alert: false}
         
         setAlert(empData);
